@@ -25,7 +25,7 @@ public class LoginController {
     RestTemplate restTemplateConfig;
 
     //Vista inicial
-    @GetMapping("/")
+    @GetMapping("/inicio")
     public String inicioPage(Model model) {
 
         LoginModel loginModel = new LoginModel("00", "", "");
@@ -35,7 +35,7 @@ public class LoginController {
     }
 
     //Autenticar
-    @PostMapping("/")
+    @PostMapping("/auth")
     public String autenticarFeign(@RequestParam("codeAlumno") String codeAlumno,
                                   @RequestParam("passAlumno") String passAlumno,
                                   Model model) {
