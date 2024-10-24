@@ -15,7 +15,7 @@ import pe.edu.cibertec.integrantes_frontend_prj.viewModel.LoginModel;
 import java.util.ArrayList;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/")
 public class LoginController {
     //FeignClient
     @Autowired
@@ -25,7 +25,7 @@ public class LoginController {
     RestTemplate restTemplateConfig;
 
     //Vista inicial
-    @GetMapping("/inicio")
+    @GetMapping("/")
     public String inicioPage(Model model) {
 
         LoginModel loginModel = new LoginModel("00", "", "");
@@ -35,7 +35,7 @@ public class LoginController {
     }
 
     //Autenticar
-    @PostMapping("/auth")
+    @PostMapping("/")
     public String autenticarFeign(@RequestParam("codeAlumno") String codeAlumno,
                                   @RequestParam("passAlumno") String passAlumno,
                                   Model model) {
