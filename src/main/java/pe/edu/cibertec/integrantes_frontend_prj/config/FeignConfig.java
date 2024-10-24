@@ -10,8 +10,6 @@ public class FeignConfig {
     @Bean
     public Request.Options requestOptions() {
         //Declaramos un timeout para conectarnos y otro para lectura
-        return new Request.Options(10000, 15000);
-        //1° Es el tiempo máximo que el cliente espera para establecer la conexión.
-        //2° Es el tiempo máximo que el cliente espera para recibir una respuesta después de establecer la conexión.
+        return new Request.Options(10000, 10000);
     }
 }

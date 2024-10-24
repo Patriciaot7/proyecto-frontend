@@ -27,9 +27,8 @@ public class LoginController {
     //Vista inicial
     @GetMapping("/inicio")
     public String inicioPage(Model model) {
-        //Instanciamos el viewmodel
+
         LoginModel loginModel = new LoginModel("00", "", "");
-        //                  VARIABLE            VALOR
         model.addAttribute("loginModel", loginModel);
         //Retornamos la vista
         return "inicioPage";

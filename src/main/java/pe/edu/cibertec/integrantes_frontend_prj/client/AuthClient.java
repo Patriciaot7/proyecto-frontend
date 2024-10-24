@@ -12,7 +12,8 @@ import pe.edu.cibertec.integrantes_frontend_prj.dto.LoginResponseDTO;
 import java.util.ArrayList;
 
 //Asociamos la clase config al Feign
-@FeignClient(name = "autenticacion", url = "http://localhost:8181/auth", configuration = FeignConfig.class) //Permitira pasar los servicios que queramos consumir
+//Permitira pasar los servicios que queramos consumir
+@FeignClient(name = "autenticacion", url = "http://localhost:8181/auth", configuration = FeignConfig.class)
 public interface AuthClient {
     //Firma del login
     @PostMapping("/login")
