@@ -15,7 +15,7 @@ import pe.edu.cibertec.integrantes_frontend_prj.viewModel.LoginModel;
 import java.util.ArrayList;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/login")
 public class LoginController {
     //FeignClient
     @Autowired
